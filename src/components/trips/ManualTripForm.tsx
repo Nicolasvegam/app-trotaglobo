@@ -201,8 +201,7 @@ export function ManualTripForm({ onSuccess, onCancel }: ManualTripFormProps) {
     setTags(tags.filter((_, i) => i !== index));
   };
 
-  const handleUrlSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleUrlSubmit = () => {
     if (coverImageUrl) {
       setCoverImage(coverImageUrl);
     }
@@ -271,7 +270,7 @@ export function ManualTripForm({ onSuccess, onCancel }: ManualTripFormProps) {
           </div>
 
           {coverImageSource === 'url' ? (
-            <form onSubmit={handleUrlSubmit} className="flex gap-2">
+            <div className="flex gap-2">
               <Input
                 type="url"
                 placeholder="Enter image URL"
@@ -279,8 +278,8 @@ export function ManualTripForm({ onSuccess, onCancel }: ManualTripFormProps) {
                 onChange={(e) => setCoverImageUrl(e.target.value)}
                 className="flex-1"
               />
-              <Button type="submit" variant="outline">Add URL</Button>
-            </form>
+              <Button type="button" variant="outline" onClick={handleUrlSubmit}>Add URL</Button>
+            </div>
           ) : null}
 
           {coverImage && (
