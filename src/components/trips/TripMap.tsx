@@ -26,19 +26,83 @@ const getTripColor = (tripId: string): string => {
 interface TripMapProps {
   trips: TripAdapter[];
   onTripClick: (trip: TripAdapter) => void;
+  customCenter?: { lat: number; lng: number };
+  customZoom?: number;
 }
 
-export function TripMap({ trips, onTripClick }: TripMapProps) {
+export function TripMap({ trips, onTripClick, customCenter, customZoom }: TripMapProps) {
   const [hoveredTripId, setHoveredTripId] = useState<string | null>(null);
   
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || "",
   });
 
-  const mapCenter = useMemo(
-    () => ({ lat: 30, lng: 0 }), 
-    []
-  );
+  // Calculate bounds and center based on all trip locations
+  const { mapCenter, zoom } = useMemo(() => {
+    if (customCenter && customZoom) {
+      return { mapCenter: customCenter, zoom: customZoom };
+    }
+
+    if (trips.length === 0) {
+      return { mapCenter: { lat: 30, lng: 0 }, zoom: 2 };
+    }
+
+    // Collect all coordinates
+    const coordinates: { lat: number; lng: number }[] = [];
+    trips.forEach(trip => {
+      trip.trip_cities.forEach(city => {
+        if (city.lat && city.lng) {
+          coordinates.push({ lat: city.lat, lng: city.lng });
+        }
+      });
+    });
+
+    if (coordinates.length === 0) {
+      return { mapCenter: { lat: 30, lng: 0 }, zoom: 2 };
+    }
+
+    // Calculate bounds
+    const bounds = coordinates.reduce((bounds, coord) => {
+      return {
+        minLat: Math.min(bounds.minLat, coord.lat),
+        maxLat: Math.max(bounds.maxLat, coord.lat),
+        minLng: Math.min(bounds.minLng, coord.lng),
+        maxLng: Math.max(bounds.maxLng, coord.lng),
+      };
+    }, {
+      minLat: coordinates[0].lat,
+      maxLat: coordinates[0].lat,
+      minLng: coordinates[0].lng,
+      maxLng: coordinates[0].lng,
+    });
+
+    // Calculate center
+    const center = {
+      lat: (bounds.minLat + bounds.maxLat) / 2,
+      lng: (bounds.minLng + bounds.maxLng) / 2,
+    };
+
+    // Calculate appropriate zoom level based on bounds
+    const latDiff = bounds.maxLat - bounds.minLat;
+    const lngDiff = bounds.maxLng - bounds.minLng;
+    const maxDiff = Math.max(latDiff, lngDiff);
+
+    let calculatedZoom = 2;
+    if (maxDiff < 0.5) calculatedZoom = 11;
+    else if (maxDiff < 1) calculatedZoom = 10;
+    else if (maxDiff < 5) calculatedZoom = 8;
+    else if (maxDiff < 10) calculatedZoom = 6;
+    else if (maxDiff < 20) calculatedZoom = 5;
+    else if (maxDiff < 40) calculatedZoom = 4;
+    else if (maxDiff < 80) calculatedZoom = 3;
+
+    // For single location trips, use a closer zoom
+    if (coordinates.length === 1) {
+      calculatedZoom = 10;
+    }
+
+    return { mapCenter: center, zoom: calculatedZoom };
+  }, [trips, customCenter, customZoom]);
 
   // Premium map styling
   const mapOptions = useMemo<google.maps.MapOptions>(() => {
@@ -147,7 +211,7 @@ export function TripMap({ trips, onTripClick }: TripMapProps) {
     <div className="h-full w-full">
       <GoogleMap
         options={mapOptions}
-        zoom={2}
+        zoom={zoom}
         center={mapCenter}
         mapTypeId={google.maps.MapTypeId.ROADMAP}
         mapContainerStyle={{ width: "100%", height: "100%" }}
