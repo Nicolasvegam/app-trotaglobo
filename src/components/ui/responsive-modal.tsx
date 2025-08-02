@@ -33,13 +33,15 @@ export function ResponsiveModal({
   if (isDesktop) {
     return (
       <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
-        <DialogContent className={className}>
+        <DialogContent className={cn("max-h-[90vh] overflow-y-auto", className)}>
           {title && (
             <DialogHeader>
               <DialogTitle>{title}</DialogTitle>
             </DialogHeader>
           )}
-          {children}
+          <div className="overflow-y-auto">
+            {children}
+          </div>
         </DialogContent>
       </Dialog>
     );
