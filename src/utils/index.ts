@@ -60,6 +60,7 @@ const countryToCode: { [key: string]: string } = {
   "Iceland": "IS",
   "Norway": "NO",
   "Sweden": "SE",
+  "Malta": "MT",
   
   // Asia
   "China": "CN",
@@ -73,6 +74,7 @@ const countryToCode: { [key: string]: string } = {
   "Egypt": "EG",
   "South Africa": "ZA",
   "Morocco": "MA",
+  "Túnez": "TN",
   
   // Oceania
   "Australia": "AU",
@@ -149,6 +151,7 @@ export const getCountryContinent = (country: string): string => {
     "Iceland": "Europe",
     "Norway": "Europe",
     "Sweden": "Europe",
+    "Malta": "Europe",
     
     // Asia
     "China": "Asia",
@@ -162,6 +165,7 @@ export const getCountryContinent = (country: string): string => {
     "Egypt": "Africa",
     "South Africa": "Africa",
     "Morocco": "Africa",
+    "Túnez": "Africa",
     
     // Oceania
     "Australia": "Oceania",

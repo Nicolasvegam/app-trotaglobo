@@ -1,12 +1,11 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { getTrips } from "@/lib/queries/get-trips";
-import { TripAdapter } from "@/lib/adapter/trip.adapter";
 import { TripCard } from "@/components/trips/TripCard";
-import { TripModal } from "@/components/trips/TripModal";
 import { AddTripModal } from "@/components/trips/AddTripModal";
+import { useRouter } from "next/navigation";
 import { TripCountryFilter } from "@/components/trips/TripCountryFilter";
 import { TripContinentFilter } from "@/components/trips/TripContinentFilter";
 import { TripMap } from "@/components/trips/TripMap";
@@ -17,13 +16,16 @@ import { useSession } from "@clerk/nextjs";
 import { Footer } from "@/components/Footer";
 import { getCountryContinent } from "@/utils";
 import Link from "next/link";
+import { createTrip } from "@/lib/commands/create-trip";
+import { CreateTripDto } from "@/lib/dtos/create-trip.dto";
 
 export default function TripsPage() {
-  const [selectedTrip, setSelectedTrip] = useState<TripAdapter | null>(null);
+  const router = useRouter();
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);
   const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
   const [selectedContinent, setSelectedContinent] = useState<string | null>(null);
   const { session } = useSession();
+  const queryClient = useQueryClient();
   const { data: trips, isLoading, error } = useQuery({
     queryKey: ["trips"],
     queryFn: async () => {
@@ -35,6 +37,7 @@ export default function TripsPage() {
     },
     enabled: !!session
   });
+
 
   const filteredTrips = useMemo(() => {
     if (!trips) return [];
@@ -126,14 +129,265 @@ export default function TripsPage() {
         <div className="mb-6">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-2xl font-semibold text-neutral-800">Your Travel Stats</h2>
-            {session?.user?.id && (
-              <Link href={`/users/${session.user.id}`}>
-                <Button variant="outline" className="gap-2">
-                  <User className="h-4 w-4" />
-                  View Profile
+            <div className="flex gap-2">
+              {session && (
+                <Button
+                  variant="outline"
+                  className="gap-2"
+                  onClick={async () => {
+                    if (!session) return;
+                    const token = await session.getToken();
+                    if (!token) return;
+                    try {
+                      const mediterraneoGreciaTrip: CreateTripDto = {
+                      title: "Gran Tour Mediterráneo y Grecia 2025",
+                      description: "Viaje épico por Portugal, España, islas mediterráneas y culminando en Grecia con Creta - octubre 2025",
+                      start_date: "2025-10-01T00:00:00Z",
+                      end_date: "2025-10-31T00:00:00Z",
+                      cover_image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?ixlib=rb-4.0.3",
+                      trip_cities: [
+                        {
+                          name: "Lisboa",
+                          country: "Portugal",
+                          lat: 38.7223,
+                          lng: -9.1393,
+                          trip_places: [
+                            { name: "Torre de Belém" },
+                            { name: "Barrio de Alfama" },
+                            { name: "Monasterio de los Jerónimos" },
+                            { name: "Tranvía 28" },
+                            { name: "Mirador de Santa Lucía" }
+                          ]
+                        },
+                        {
+                          name: "Porto",
+                          country: "Portugal",
+                          lat: 41.1579,
+                          lng: -8.6291,
+                          trip_places: [
+                            { name: "Librería Lello" },
+                            { name: "Puente Dom Luis I" },
+                            { name: "Bodegas de Vino de Oporto" },
+                            { name: "Torre dos Clérigos" },
+                            { name: "Estación de São Bento" }
+                          ]
+                        },
+                        {
+                          name: "Sevilla",
+                          country: "España",
+                          lat: 37.3891,
+                          lng: -5.9845,
+                          trip_places: [
+                            { name: "Catedral y Giralda" },
+                            { name: "Real Alcázar" },
+                            { name: "Plaza de España" },
+                            { name: "Barrio de Santa Cruz" },
+                            { name: "Metropol Parasol" }
+                          ]
+                        },
+                        {
+                          name: "Málaga",
+                          country: "España",
+                          lat: 36.7213,
+                          lng: -4.4214,
+                          trip_places: [
+                            { name: "Alcazaba" },
+                            { name: "Teatro Romano" },
+                            { name: "Museo Picasso" },
+                            { name: "Playa de la Malagueta" },
+                            { name: "Mercado de Atarazanas" }
+                          ]
+                        },
+                        {
+                          name: "Granada",
+                          country: "España",
+                          lat: 37.1773,
+                          lng: -3.5986,
+                          trip_places: [
+                            { name: "Alhambra" },
+                            { name: "Generalife" },
+                            { name: "Barrio del Albaicín" },
+                            { name: "Catedral de Granada" },
+                            { name: "Mirador de San Nicolás" }
+                          ]
+                        },
+                        {
+                          name: "Valencia",
+                          country: "España",
+                          lat: 39.4699,
+                          lng: -0.3763,
+                          trip_places: [
+                            { name: "Ciudad de las Artes y las Ciencias" },
+                            { name: "Playa de la Malvarrosa" },
+                            { name: "Mercado Central" },
+                            { name: "Catedral de Valencia" },
+                            { name: "Barrio del Carmen" }
+                          ]
+                        },
+                        {
+                          name: "Barcelona",
+                          country: "España",
+                          lat: 41.3851,
+                          lng: 2.1734,
+                          trip_places: [
+                            { name: "Sagrada Familia" },
+                            { name: "Park Güell" },
+                            { name: "Las Ramblas" },
+                            { name: "Barrio Gótico" },
+                            { name: "Casa Batlló" }
+                          ]
+                        },
+                        {
+                          name: "Palma de Mallorca",
+                          country: "España",
+                          lat: 39.5696,
+                          lng: 2.6502,
+                          trip_places: [
+                            { name: "Catedral de Palma" },
+                            { name: "Castillo de Bellver" },
+                            { name: "Cuevas del Drach" },
+                            { name: "Playa de Es Trenc" },
+                            { name: "Pueblo de Valldemossa" }
+                          ]
+                        },
+                        {
+                          name: "Túnez",
+                          country: "Túnez",
+                          lat: 36.8065,
+                          lng: 10.1815,
+                          trip_places: [
+                            { name: "Medina de Túnez" },
+                            { name: "Museo del Bardo" },
+                            { name: "Ruinas de Cartago" },
+                            { name: "Sidi Bou Said" },
+                            { name: "Mezquita Zitouna" }
+                          ]
+                        },
+                        {
+                          name: "Palermo",
+                          country: "Italia",
+                          lat: 38.1157,
+                          lng: 13.3615,
+                          trip_places: [
+                            { name: "Catedral de Palermo" },
+                            { name: "Palacio de los Normandos" },
+                            { name: "Teatro Massimo" },
+                            { name: "Mercado de Ballarò" },
+                            { name: "Catacumbas de los Capuchinos" }
+                          ]
+                        },
+                        {
+                          name: "La Valeta",
+                          country: "Malta",
+                          lat: 35.8989,
+                          lng: 14.5146,
+                          trip_places: [
+                            { name: "Co-Catedral de San Juan" },
+                            { name: "Palacio del Gran Maestre" },
+                            { name: "Jardines Upper Barrakka" },
+                            { name: "Fort St. Elmo" },
+                            { name: "Las Tres Ciudades" }
+                          ]
+                        },
+                        {
+                          name: "Atenas",
+                          country: "Grecia",
+                          lat: 37.9838,
+                          lng: 23.7275,
+                          trip_places: [
+                            { name: "Acrópolis y Partenón" },
+                            { name: "Museo de la Acrópolis" },
+                            { name: "Ágora Antigua" },
+                            { name: "Barrio de Plaka" },
+                            { name: "Monte Licabeto" }
+                          ]
+                        },
+                        {
+                          name: "Santorini",
+                          country: "Grecia",
+                          lat: 36.3932,
+                          lng: 25.4615,
+                          trip_places: [
+                            { name: "Oia - Puesta de sol" },
+                            { name: "Fira" },
+                            { name: "Playa Roja" },
+                            { name: "Akrotiri - Sitio arqueológico" },
+                            { name: "Bodegas de vino volcánico" }
+                          ]
+                        },
+                        {
+                          name: "Mykonos",
+                          country: "Grecia",
+                          lat: 37.4467,
+                          lng: 25.3289,
+                          trip_places: [
+                            { name: "Molinos de viento" },
+                            { name: "Pequeña Venecia" },
+                            { name: "Playa Paradise" },
+                            { name: "Chora - Centro histórico" },
+                            { name: "Isla de Delos" }
+                          ]
+                        },
+                        {
+                          name: "Heraklion",
+                          country: "Grecia",
+                          lat: 35.3387,
+                          lng: 25.1442,
+                          trip_places: [
+                            { name: "Palacio de Knossos" },
+                            { name: "Museo Arqueológico" },
+                            { name: "Fortaleza de Koules" },
+                            { name: "Mercado Central" },
+                            { name: "Playa de Ammoudara" }
+                          ]
+                        },
+                        {
+                          name: "Chania",
+                          country: "Grecia",
+                          lat: 35.5139,
+                          lng: 24.0180,
+                          trip_places: [
+                            { name: "Puerto Veneciano" },
+                            { name: "Faro de Chania" },
+                            { name: "Mercado Municipal" },
+                            { name: "Playa de Balos" },
+                            { name: "Garganta de Samaria" }
+                          ]
+                        }
+                      ],
+                      trip_tags: [
+                        { name: "Mediterráneo" },
+                        { name: "Portugal y España" },
+                        { name: "Grecia" },
+                        { name: "Creta" },
+                        { name: "Octubre 2025" },
+                        { name: "Cultura" },
+                        { name: "Playas" },
+                        { name: "Historia" }
+                      ]
+                    };
+                    
+                    await createTrip(token, mediterraneoGreciaTrip);
+                    queryClient.invalidateQueries({ queryKey: ["trips"] });
+                    alert("¡Gran Tour Mediterráneo y Grecia 2025 creado exitosamente!");
+                  } catch (error) {
+                    alert("Error al crear el viaje: " + (error as Error).message);
+                  }
+                }}
+                >
+                  <MapPin className="h-4 w-4" />
+                  Crear Tour Mediterráneo + Grecia
                 </Button>
-              </Link>
-            )}
+              )}
+              {session?.user?.id && (
+                <Link href={`/users/${session.user.id}`}>
+                  <Button variant="outline" className="gap-2">
+                    <User className="h-4 w-4" />
+                    View Profile
+                  </Button>
+                </Link>
+              )}
+            </div>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             <Card className="p-4 hover:shadow-md transition-shadow duration-200">
@@ -194,7 +448,7 @@ export default function TripsPage() {
               <div className="h-[400px] lg:h-[600px]">
                 {filteredTrips.length > 0 && <TripMap 
                   trips={filteredTrips} 
-                  onTripClick={setSelectedTrip} 
+                  onTripClick={(trip) => router.push(`/trips/${trip.id}`)} 
                 />}
               </div>
             </div>
@@ -205,10 +459,12 @@ export default function TripsPage() {
             <div className="flex flex-col mb-8">
               <div className="flex items-center justify-between mb-4">
                 <h1 className="text-2xl font-semibold text-neutral-900">My Trips</h1>
-                <Button onClick={() => setIsAddModalOpen(true)}>
-                  <Plus className="h-4 w-4 mr-2" />
-                  Add Trip
-                </Button>
+                {session && (
+                  <Button onClick={() => setIsAddModalOpen(true)}>
+                    <Plus className="h-4 w-4 mr-2" />
+                    Add Trip
+                  </Button>
+                )}
               </div>
 
               <div className="mt-4 space-y-2">
@@ -230,7 +486,7 @@ export default function TripsPage() {
                 <TripCard
                   key={trip.id}
                   trip={trip}
-                  onClick={setSelectedTrip}
+                  onClick={() => router.push(`/trips/${trip.id}`)}
                 />
               ))}
               
@@ -240,42 +496,42 @@ export default function TripsPage() {
                     <MapPin className="h-8 w-8 text-neutral-400" />
                   </div>
                   <h3 className="text-xl font-medium text-neutral-800 mb-3">
-                    No trips yet
+                    {session ? "No trips yet" : "Welcome to TrotaGlobo"}
                   </h3>
                   <p className="text-neutral-500 max-w-md mb-8 text-lg">
-                    Start adding your travel memories to build your personal travel map.
+                    {session 
+                      ? "Start adding your travel memories to build your personal travel map."
+                      : "Sign in to start tracking your adventures and building your personal travel map."
+                    }
                   </p>
-                  <Button 
-                    onClick={() => setIsAddModalOpen(true)}
-                    className="px-6 py-2.5 text-base"
-                  >
-                    <Plus className="h-5 w-5 mr-2" />
-                    <span>Add Trip</span>
-                  </Button>
+                  {session && (
+                    <Button 
+                      onClick={() => setIsAddModalOpen(true)}
+                      className="px-6 py-2.5 text-base"
+                    >
+                      <Plus className="h-5 w-5 mr-2" />
+                      <span>Add Trip</span>
+                    </Button>
+                  )}
                 </div>
               )}
             </div>
           </div>
         </div>
 
-        <div className="fixed bottom-8 right-8 z-10">
-          <Button 
-            className="rounded-full h-16 w-16 shadow-lg hover:shadow-xl transition-all duration-200 bg-black text-white" 
-            size="icon"
-            onClick={() => setIsAddModalOpen(true)}
-          >
-            <Plus className="h-7 w-7" />
-          </Button>
-        </div>
+        {session && (
+          <div className="fixed bottom-8 right-8 z-10">
+            <Button 
+              className="rounded-full h-16 w-16 shadow-lg hover:shadow-xl transition-all duration-200 bg-black text-white" 
+              size="icon"
+              onClick={() => setIsAddModalOpen(true)}
+            >
+              <Plus className="h-7 w-7" />
+            </Button>
+          </div>
+        )}
       </main>
 
-      {selectedTrip && (
-        <TripModal
-          trip={selectedTrip}
-          isOpen={!!selectedTrip}
-          onClose={() => setSelectedTrip(null)}
-        />
-      )}
 
       <AddTripModal
         isOpen={isAddModalOpen}

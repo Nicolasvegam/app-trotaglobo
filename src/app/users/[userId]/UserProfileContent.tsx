@@ -3,9 +3,7 @@
 import { useState, useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { getTrips } from "@/lib/queries/get-trips";
-import { TripAdapter } from "@/lib/adapter/trip.adapter";
 import { TripCard } from "@/components/trips/TripCard";
-import { TripModal } from "@/components/trips/TripModal";
 import { TripCountryFilter } from "@/components/trips/TripCountryFilter";
 import { TripContinentFilter } from "@/components/trips/TripContinentFilter";
 import { TripMap } from "@/components/trips/TripMap";
@@ -14,6 +12,7 @@ import { MapPin, Globe, Map as MapIcon, CalendarDays, Trophy } from "lucide-reac
 import { Footer } from "@/components/Footer";
 import { getCountryContinent } from "@/utils";
 import { ClerkUserAdapter } from "@/lib/adapter/clerk-user.adapter";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 
 interface UserProfileContentProps {
@@ -21,7 +20,7 @@ interface UserProfileContentProps {
 }
 
 export function UserProfileContent({ user }: UserProfileContentProps) {
-  const [selectedTrip, setSelectedTrip] = useState<TripAdapter | null>(null);
+  const router = useRouter();
   const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
   const [selectedContinent, setSelectedContinent] = useState<string | null>(null);
   
@@ -195,7 +194,7 @@ export function UserProfileContent({ user }: UserProfileContentProps) {
               <div className="h-[400px] lg:h-[600px]">
                 {filteredTrips.length > 0 && <TripMap 
                   trips={filteredTrips} 
-                  onTripClick={setSelectedTrip} 
+                  onTripClick={(trip) => router.push(`/trips/${trip.id}`)} 
                 />}
               </div>
             </div>
@@ -227,7 +226,7 @@ export function UserProfileContent({ user }: UserProfileContentProps) {
                 <TripCard
                   key={trip.id}
                   trip={trip}
-                  onClick={setSelectedTrip}
+                  onClick={() => router.push(`/trips/${trip.id}`)}
                 />
               ))}
               
@@ -248,14 +247,6 @@ export function UserProfileContent({ user }: UserProfileContentProps) {
           </div>
         </div>
       </main>
-
-      {selectedTrip && (
-        <TripModal
-          trip={selectedTrip}
-          isOpen={!!selectedTrip}
-          onClose={() => setSelectedTrip(null)}
-        />
-      )}
 
       <Footer />
     </div>
