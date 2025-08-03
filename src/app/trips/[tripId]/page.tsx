@@ -3,7 +3,8 @@
 import { useParams } from "next/navigation";
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { ChevronLeft, Calendar, Clock, MapPin, Globe, Map as MapIcon, CalendarDays, Trophy, Tag, Camera, Trash2 } from "lucide-react";
+import Image from "next/image";
+import { ChevronLeft, MapPin, Globe, Map as MapIcon, CalendarDays, Tag, Camera, Trash2 } from "lucide-react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { getTrip } from "@/lib/queries/get-trip";
 import { useSession } from "@clerk/nextjs";
@@ -210,11 +211,15 @@ export default function TripDetailPage() {
             {/* Cover Image */}
             {trip.cover_image && (
               <div className="bg-white rounded-2xl shadow-sm overflow-hidden border border-neutral-200 hover:shadow-md transition-shadow duration-200">
-                <img 
-                  src={trip.cover_image} 
-                  alt={trip.title}
-                  className="w-full h-64 object-cover"
-                />
+                <div className="relative w-full h-64">
+                  <Image 
+                    src={trip.cover_image} 
+                    alt={trip.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                </div>
               </div>
             )}
 
