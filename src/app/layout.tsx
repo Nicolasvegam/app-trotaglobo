@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Trotaglobo Team" }],
   creator: "Trotaglobo",
   publisher: "Trotaglobo",
-  metadataBase: new URL("https://globe-trotter.vercel.app"),
+  metadataBase: new URL("https://trotaglobo.nicovega.dev"),
   icons: {
     icon: "/logo.ico",
     shortcut: "/logo.ico",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://globe-trotter.vercel.app",
+    url: "https://trotaglobo.nicovega.dev",
     title: "Trotaglobo - Track Your Travel Adventures",
     description: "Track and visualize your travel adventures around the world. Keep a record of past trips and plan future destinations with our interactive travel map.",
     siteName: "Trotaglobo",
