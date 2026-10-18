@@ -1,10 +1,10 @@
-import { TripAdapter } from "@/lib/adapter/trip.adapter";
+import { Trip } from "@/lib/trips";
 import { Button } from "@/components/ui/button";
 import { Globe } from "lucide-react";
 import { getCountryFlag } from "@/utils";
 
 interface TripCountryFilterProps {
-  displayedTrips: TripAdapter[];
+  displayedTrips: Trip[];
   selectedCountry: string | null;
   onCountrySelect: (country: string | null) => void;
 }
@@ -13,8 +13,8 @@ export function TripCountryFilter({ displayedTrips, selectedCountry, onCountrySe
   const uniqueCountries = Array.from(
     new Set(
       displayedTrips
-        .filter(trip => trip.trip_cities.length > 0)
-        .flatMap(trip => trip.trip_cities.map(city => city.country))
+        .filter(trip => trip.cities.length > 0)
+        .flatMap(trip => trip.cities.map(city => city.country))
     )
   ).sort();
 
