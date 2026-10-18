@@ -1,6 +1,6 @@
 import { useLoadScript, GoogleMap, MarkerF } from "@react-google-maps/api";
 import { useMemo, useState } from "react";
-import { TripAdapter } from "@/lib/adapter/trip.adapter";
+import { Trip } from "@/lib/trips";
 
 // Predefined set of visually distinct colors
 const TRIP_COLORS = [
@@ -24,8 +24,8 @@ const getTripColor = (tripId: string): string => {
 };
 
 interface TripMapProps {
-  trips: TripAdapter[];
-  onTripClick: (trip: TripAdapter) => void;
+  trips: Trip[];
+  onTripClick: (trip: Trip) => void;
   customCenter?: { lat: number; lng: number };
   customZoom?: number;
 }
@@ -50,7 +50,7 @@ export function TripMap({ trips, onTripClick, customCenter, customZoom }: TripMa
     // Collect all coordinates
     const coordinates: { lat: number; lng: number }[] = [];
     trips.forEach(trip => {
-      trip.trip_cities.forEach(city => {
+      trip.cities.forEach(city => {
         if (city.lat && city.lng) {
           coordinates.push({ lat: city.lat, lng: city.lng });
         }
@@ -217,13 +217,13 @@ export function TripMap({ trips, onTripClick, customCenter, customZoom }: TripMa
         mapContainerStyle={{ width: "100%", height: "100%" }}
       >
         {trips.flatMap(trip => 
-          trip.trip_cities.map(city => {
+          trip.cities.map((city, index) => {
             const isHovered = trip.id === hoveredTripId;
             const tripColor = getTripColor(trip.id);
             
             return (
               <MarkerF
-                key={city.id}
+                key={`${trip.id}-${index}`}
                 position={{ lat: city.lat, lng: city.lng }}
                 title={`${trip.title} - ${city.name}`}
                 icon={{

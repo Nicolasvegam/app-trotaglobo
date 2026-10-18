@@ -3,76 +3,49 @@
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Project Overview
-Trotaglobo is a travel tracking application built with Next.js that allows users to record their past trips and plan future destinations with an interactive world map.
+Trotaglobo is Nico's public travel log (https://trotaglobo.nicovega.dev): past trips and the next planned one on an interactive world map. It is a static site; there is no login and no database.
 
 ## Technology Stack
-- **Framework**: Next.js 15.2.0 with App Router
-- **Authentication**: Clerk
-- **Database**: Supabase
+- **Framework**: Next.js 15.2 with App Router (all pages prerendered at build time)
+- **Data**: a single JSON file, `src/data/trips.json`
 - **Styling**: Tailwind CSS v4
-- **UI Components**: Radix UI primitives with custom components
-- **State Management**: React Query (TanStack Query)
+- **UI Components**: shadcn/ui-style primitives in `src/components/ui/`
 - **Maps**: Google Maps API (@react-google-maps/api)
 - **TypeScript**: Strict type checking enabled
 
 ## Essential Commands
 ```bash
-# Development
 npm run dev           # Starts development server with Turbopack
-
-# Build & Production
 npm run build         # Creates production build
-npm run start         # Starts production server
-
-# Code Quality
 npm run lint          # Runs Next.js linting
 ```
 
-## Architecture Overview
+## Data
+All content lives in `src/data/trips.json`, an array of trips:
 
-### Authentication Flow
-- Uses Clerk for authentication via `ClerkProvider` in root layout
-- Middleware (`src/middleware.ts`) protects routes using `clerkMiddleware`
-- Session tokens are passed to Supabase for API authentication
-
-### Data Layer Architecture
-1. **Database**: Supabase PostgreSQL with row-level security
-2. **API Communication**: 
-   - Client-side queries use Clerk session tokens
-   - `createClientSupabaseClient()` creates authenticated Supabase clients
-3. **Data Flow**:
-   - **Queries**: Located in `src/lib/queries/` (e.g., `get-trips.ts`)
-   - **Commands**: Located in `src/lib/commands/` (e.g., `create-trip.ts`, `delete-trip.ts`)
-   - **Adapters**: Transform database models to frontend types (`src/lib/adapter/`)
-   - **DTOs**: Data transfer objects for type safety (`src/lib/dtos/`)
-
-### Key Entities
-- **Trip**: Main entity with title, description, dates, and cover image
-- **TripCity**: Cities visited during a trip (many-to-one with Trip)
-- **TripPlace**: Specific places within cities (many-to-one with TripCity)
-- **TripTag**: Tags for categorizing trips (many-to-one with Trip)
-
-### Frontend Architecture
-- **Pages**: App router pages in `src/app/`
-- **Components**: Modular components in `src/components/`
-  - UI primitives in `src/components/ui/` (shadcn/ui pattern)
-  - Feature components organized by domain (e.g., `src/components/trips/`)
-- **Hooks**: Custom hooks in `src/hooks/`
-- **State Management**: React Query for server state, local state with React hooks
-
-### Environment Variables Required
+```jsonc
+{
+  "id": "rio-buzios-2026",          // URL slug: /trips/<id>
+  "title": "Rio & Búzios 2026",
+  "description": "...",
+  "start_date": "2026-06-17",        // YYYY-MM-DD
+  "end_date": "2026-06-25",
+  "cover_image": "https://images.unsplash.com/...",
+  "tags": ["Playas"],
+  "cities": [
+    { "name": "Búzios", "country": "Brazil", "lat": -22.7469, "lng": -41.8817, "places": ["Rua das Pedras"] }
+  ]
+}
 ```
-NEXT_PUBLIC_SUPABASE_URL
-NEXT_PUBLIC_SUPABASE_KEY
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
-CLERK_SECRET_KEY
+
+- Trips whose `end_date` is in the future show as "Planned"; stats only count past trips.
+- `country` must be an English name known to `src/utils/index.ts` (flag + continent maps); add new countries there.
+- Use one spelling per city so the "unique cities" stat doesn't double count.
+- The source of truth for trip history is the Obsidian note "✈️ Historial de Viajes".
+
+`src/lib/trips.ts` loads the JSON and exposes `getTrips`, `getTrip` and date helpers (dates are parsed as local dates with `parseISO`).
+
+## Environment Variables
+```
 NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
 ```
-
-## Key Patterns
-1. **Authentication**: Always check for Clerk session before making API calls
-2. **Data Fetching**: Use React Query with proper error handling
-3. **Type Safety**: All API responses are typed through adapters
-4. **Component Structure**: Follow existing patterns in `src/components/ui/`
-5. **Responsive Design**: Use responsive modal component and media query hook
-6. **Error Handling**: Display user-friendly error messages, handle loading states

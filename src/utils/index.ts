@@ -1,7 +1,3 @@
-export * from './calculate-duration';
-export * from './get-country';
-export * from './calculate-travel-stats';
-
 // Country to ISO code mapping for flag emojis
 const countryToCode: { [key: string]: string } = {
   // North America
@@ -69,6 +65,8 @@ const countryToCode: { [key: string]: string } = {
   "Thailand": "TH",
   "Vietnam": "VN",
   "Hong Kong": "HK",
+  "Cambodia": "KH",
+  "Singapore": "SG",
   
   // Africa
   "Egypt": "EG",
@@ -160,6 +158,8 @@ export const getCountryContinent = (country: string): string => {
     "Thailand": "Asia",
     "Vietnam": "Asia",
     "Hong Kong": "Asia",
+    "Cambodia": "Asia",
+    "Singapore": "Asia",
     
     // Africa
     "Egypt": "Africa",

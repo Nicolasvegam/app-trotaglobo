@@ -1,22 +1,21 @@
-import { TripAdapter } from "@/lib/adapter/trip.adapter";
 import { MapPin, Calendar, Tag, Globe } from "lucide-react";
 import { format } from "date-fns";
 import Image from "next/image";
 import { getCountryFlag } from "@/utils";
+import { Trip, getTripDates, getTripDays, isPastTrip } from "@/lib/trips";
 
 interface TripCardProps {
-  trip: TripAdapter;
-  onClick: (trip: TripAdapter) => void;
+  trip: Trip;
+  onClick: (trip: Trip) => void;
 }
 
 export function TripCard({ trip, onClick }: TripCardProps) {
-  const startDate = new Date(trip.start_date);
-  const endDate = new Date(trip.end_date);
-  const duration = Math.ceil((endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24));
-  const isPast = endDate < new Date();
+  const { start: startDate, end: endDate } = getTripDates(trip);
+  const duration = getTripDays(trip);
+  const isPast = isPastTrip(trip);
 
   // Get unique countries from trip cities
-  const countries = Array.from(new Set(trip.trip_cities.map(city => city.country)));
+  const countries = Array.from(new Set(trip.cities.map(city => city.country)));
 
   return (
     <div 
@@ -64,7 +63,7 @@ export function TripCard({ trip, onClick }: TripCardProps) {
           
           <div className="flex items-center text-sm text-neutral-600">
             <MapPin className="h-4 w-4 mr-2 text-neutral-400" />
-            <span>{trip.trip_cities.length} {trip.trip_cities.length === 1 ? 'city' : 'cities'}</span>
+            <span>{trip.cities.length} {trip.cities.length === 1 ? 'city' : 'cities'}</span>
           </div>
 
           <div className="flex items-center text-sm text-neutral-600">
@@ -79,15 +78,15 @@ export function TripCard({ trip, onClick }: TripCardProps) {
             </div>
           </div>
 
-          {trip.trip_tags && trip.trip_tags.length > 0 && (
+          {trip.tags.length > 0 && (
             <div className="flex flex-wrap gap-2 mt-2">
-              {trip.trip_tags.map(tag => (
+              {trip.tags.map(tag => (
                 <span
-                  key={tag.id}
+                  key={tag}
                   className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-neutral-100 text-neutral-700"
                 >
                   <Tag className="h-3 w-3 mr-1" />
-                  {tag.name}
+                  {tag}
                 </span>
               ))}
             </div>

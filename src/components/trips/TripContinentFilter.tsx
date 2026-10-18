@@ -1,9 +1,9 @@
-import { TripAdapter } from "@/lib/adapter/trip.adapter";
+import { Trip } from "@/lib/trips";
 import { Button } from "@/components/ui/button";
 import { getCountryContinent } from "@/utils";
 
 interface TripContinentFilterProps {
-  displayedTrips: TripAdapter[];
+  displayedTrips: Trip[];
   selectedContinent: string | null;
   onContinentSelect: (continent: string | null) => void;
 }
@@ -13,9 +13,9 @@ export function TripContinentFilter({ displayedTrips, selectedContinent, onConti
   const uniqueContinents = Array.from(
     new Set(
       displayedTrips
-        .filter(trip => trip.trip_cities.length > 0)
+        .filter(trip => trip.cities.length > 0)
         .flatMap(trip => 
-          trip.trip_cities.map(city => getCountryContinent(city.country))
+          trip.cities.map(city => getCountryContinent(city.country))
         )
     )
   ).sort();

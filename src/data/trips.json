@@ -1,0 +1,1653 @@
+[
+  {
+    "id": "buzios-2011",
+    "title": "Búzios 2011",
+    "description": "Una semana de playa en Búzios.",
+    "start_date": "2011-07-01",
+    "end_date": "2011-07-07",
+    "cover_image": "https://images.unsplash.com/photo-1508272961731-dc692d634a79?q=80&w=2000&auto=format&fit=crop",
+    "tags": [
+      "Beach"
+    ],
+    "cities": [
+      {
+        "name": "Búzios",
+        "country": "Brazil",
+        "lat": -22.7469,
+        "lng": -41.8817,
+        "places": []
+      }
+    ]
+  },
+  {
+    "id": "riviera-maya-adventure-2012",
+    "title": "Riviera Maya Adventure 2012",
+    "description": "A week exploring the beaches, Mayan ruins, and natural parks of Mexico's Riviera Maya.",
+    "start_date": "2012-07-01",
+    "end_date": "2012-07-08",
+    "cover_image": "https://images.unsplash.com/photo-1676381517063-dc644ff4406b?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "tags": [
+      "Beach",
+      "Ruins",
+      "Culture",
+      "Adventure",
+      "Summer",
+      "Park"
+    ],
+    "cities": [
+      {
+        "name": "Cancún",
+        "country": "Mexico",
+        "lat": 21.1619,
+        "lng": -86.8515,
+        "places": [
+          "Hotel Zone Beaches",
+          "Mercado 28",
+          "Coco Bongo"
+        ]
+      },
+      {
+        "name": "Chichen Itza",
+        "country": "Mexico",
+        "lat": 20.6843,
+        "lng": -88.5678,
+        "places": [
+          "El Castillo (Pyramid)",
+          "Great Ball Court",
+          "Temple of the Warriors"
+        ]
+      },
+      {
+        "name": "Xcaret Park",
+        "country": "Mexico",
+        "lat": 20.5814,
+        "lng": -87.1185,
+        "places": [
+          "Underground Rivers",
+          "Aviary",
+          "Cultural Shows"
+        ]
+      },
+      {
+        "name": "Isla Mujeres",
+        "country": "Mexico",
+        "lat": 21.2324,
+        "lng": -86.7331,
+        "places": [
+          "Playa Norte",
+          "Punta Sur",
+          "Garrafon Natural Reef Park"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "chile-argentina-lake-district-2014",
+    "title": "Chile & Argentina Lake District 2014",
+    "description": "Exploring the stunning lakes and natural beauty of the Chilean and Argentinian Lake Districts.",
+    "start_date": "2014-01-10",
+    "end_date": "2014-01-31",
+    "cover_image": "https://images.unsplash.com/photo-1584151629593-04ae300b8d90?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "tags": [
+      "Lakes",
+      "Mountains",
+      "Nature",
+      "Road Trip",
+      "Summer"
+    ],
+    "cities": [
+      {
+        "name": "Salto del Laja",
+        "country": "Chile",
+        "lat": -37.22,
+        "lng": -72.39,
+        "places": [
+          "Laja Falls",
+          "Hiking Trails",
+          "Local Crafts"
+        ]
+      },
+      {
+        "name": "San Carlos de Bariloche",
+        "country": "Argentina",
+        "lat": -41.1333,
+        "lng": -71.3,
+        "places": [
+          "Nahuel Huapi Lake",
+          "Cerro Catedral",
+          "Circuito Chico",
+          "Chocolate Shops"
+        ]
+      },
+      {
+        "name": "Puerto Varas",
+        "country": "Chile",
+        "lat": -41.3195,
+        "lng": -72.9854,
+        "places": [
+          "Lake Llanquihue",
+          "Osorno Volcano",
+          "Petrohué Falls"
+        ]
+      },
+      {
+        "name": "Valdivia",
+        "country": "Chile",
+        "lat": -39.8142,
+        "lng": -73.2459,
+        "places": [
+          "Mercado Fluvial (River Market)",
+          "Kunstmann Brewery",
+          "Niebla Fort",
+          "Valdivian Coastal Reserve"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "northeast-brazil-beaches-2014",
+    "title": "Northeast Brazil Beaches 2014",
+    "description": "Exploring the stunning beaches and natural pools of Northeast Brazil.",
+    "start_date": "2014-07-01",
+    "end_date": "2014-07-15",
+    "cover_image": "https://images.unsplash.com/photo-1710860595849-595ee99c8e72?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "tags": [
+      "Beach",
+      "Northeast",
+      "Summer",
+      "Nature"
+    ],
+    "cities": [
+      {
+        "name": "Maceió",
+        "country": "Brazil",
+        "lat": -9.6658,
+        "lng": -35.7353,
+        "places": [
+          "Pajuçara Beach",
+          "Ponta Verde Beach",
+          "Natural Pools of Pajuçara"
+        ]
+      },
+      {
+        "name": "Recife",
+        "country": "Brazil",
+        "lat": -8.0476,
+        "lng": -34.877,
+        "places": [
+          "Recife Antigo",
+          "Boa Viagem Beach",
+          "Instituto Ricardo Brennand"
+        ]
+      },
+      {
+        "name": "Porto de Galinhas",
+        "country": "Brazil",
+        "lat": -8.5063,
+        "lng": -35.0056,
+        "places": [
+          "Natural Pools",
+          "Maracaípe Beach (Surf)",
+          "Muro Alto Beach"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cuba-summer-trip-2015",
+    "title": "Cuba Summer Trip 2015",
+    "description": "Exploring the historic streets of Havana and relaxing on the beaches of Varadero.",
+    "start_date": "2015-07-01",
+    "end_date": "2015-07-14",
+    "cover_image": "https://images.unsplash.com/photo-1602515677088-2643f5eabaa6?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "tags": [
+      "Beach",
+      "Culture",
+      "History",
+      "Cars",
+      "Summer",
+      "Caribbean"
+    ],
+    "cities": [
+      {
+        "name": "Havana",
+        "country": "Cuba",
+        "lat": 23.1136,
+        "lng": -82.3666,
+        "places": [
+          "Old Havana (Habana Vieja)",
+          "Malecón",
+          "El Capitolio",
+          "Fábrica de Arte Cubano",
+          "Classic Car Tour"
+        ]
+      },
+      {
+        "name": "Varadero",
+        "country": "Cuba",
+        "lat": 23.1569,
+        "lng": -81.2447,
+        "places": [
+          "Varadero Beach",
+          "Ambrosio Cave",
+          "Josone Park",
+          "Saturno Cave"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "east-coast-winter-trip-2016",
+    "title": "East Coast Winter Trip 2016",
+    "description": "A winter road trip up the East Coast, ending with theme parks in Orlando.",
+    "start_date": "2016-01-05",
+    "end_date": "2016-01-26",
+    "cover_image": "https://images.unsplash.com/photo-1661231134432-bebf986499a8?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "tags": [
+      "Road Trip",
+      "Urban",
+      "History",
+      "Beach",
+      "Theme Park"
+    ],
+    "cities": [
+      {
+        "name": "Miami",
+        "country": "United States",
+        "lat": 25.7617,
+        "lng": -80.1918,
+        "places": [
+          "South Beach",
+          "Wynwood Walls",
+          "Little Havana"
+        ]
+      },
+      {
+        "name": "Jacksonville",
+        "country": "United States",
+        "lat": 30.3322,
+        "lng": -81.6557,
+        "places": [
+          "Jacksonville Beach",
+          "St. Johns Town Center",
+          "Catty Shack Ranch Wildlife Sanctuary"
+        ]
+      },
+      {
+        "name": "Savannah",
+        "country": "United States",
+        "lat": 32.0809,
+        "lng": -81.0912,
+        "places": [
+          "Forsyth Park",
+          "River Street",
+          "Historic District"
+        ]
+      },
+      {
+        "name": "Virginia Beach",
+        "country": "United States",
+        "lat": 36.8529,
+        "lng": -75.978,
+        "places": [
+          "Virginia Beach Boardwalk",
+          "First Landing State Park",
+          "Virginia Aquarium"
+        ]
+      },
+      {
+        "name": "Washington DC",
+        "country": "United States",
+        "lat": 38.9072,
+        "lng": -77.0369,
+        "places": [
+          "White House",
+          "Lincoln Memorial",
+          "Smithsonian Museums",
+          "National Mall"
+        ]
+      },
+      {
+        "name": "New York",
+        "country": "United States",
+        "lat": 40.7128,
+        "lng": -74.006,
+        "places": [
+          "Times Square",
+          "Central Park",
+          "Statue of Liberty",
+          "Empire State Building"
+        ]
+      },
+      {
+        "name": "Miami Beach",
+        "country": "United States",
+        "lat": 25.7907,
+        "lng": -80.13,
+        "places": [
+          "Ocean Drive",
+          "Art Deco Historic District",
+          "Lummus Park"
+        ]
+      },
+      {
+        "name": "Orlando",
+        "country": "United States",
+        "lat": 28.5383,
+        "lng": -81.3792,
+        "places": [
+          "Walt Disney World",
+          "Universal Studios",
+          "SeaWorld"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "andean-highlights-2017",
+    "title": "Andean Highlights 2017",
+    "description": "An unforgettable journey through the deserts, salt flats, lakes, and ancient ruins of the Andes. \"Los peores baños a los que he ido\".",
+    "start_date": "2017-01-05",
+    "end_date": "2017-01-26",
+    "cover_image": "https://images.unsplash.com/photo-1526392060635-9d6019884377?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "tags": [
+      "Cultural",
+      "History",
+      "Nature",
+      "Mountains"
+    ],
+    "cities": [
+      {
+        "name": "Calama",
+        "country": "Chile",
+        "lat": -22.4544,
+        "lng": -68.9219,
+        "places": []
+      },
+      {
+        "name": "San Pedro de Atacama",
+        "country": "Chile",
+        "lat": -22.9087,
+        "lng": -68.1997,
+        "places": [
+          "Valle de la Luna",
+          "Geysers del Tatio",
+          "Salar de Atacama"
+        ]
+      },
+      {
+        "name": "Desierto / altiplano",
+        "country": "Bolivia",
+        "lat": -21.98,
+        "lng": -67.78,
+        "places": []
+      },
+      {
+        "name": "Uyuni",
+        "country": "Bolivia",
+        "lat": -20.4631,
+        "lng": -66.8255,
+        "places": [
+          "Salar de Uyuni",
+          "Incahuasi Island",
+          "Train Cemetery"
+        ]
+      },
+      {
+        "name": "Machu Picchu",
+        "country": "Peru",
+        "lat": -13.1631,
+        "lng": -72.545,
+        "places": [
+          "Machu Picchu Citadel",
+          "Huayna Picchu",
+          "Sun Gate (Inti Punku)"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rio-summer-getaway-2017",
+    "title": "Rio Summer Getaway 2017",
+    "description": "Two weeks exploring the vibrant culture and famous landmarks of Rio de Janeiro.",
+    "start_date": "2017-07-10",
+    "end_date": "2017-07-24",
+    "cover_image": "https://images.unsplash.com/photo-1516306580123-e6e52b1b7b5f?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "tags": [
+      "Beach",
+      "Urban",
+      "Culture",
+      "Summer"
+    ],
+    "cities": [
+      {
+        "name": "Rio de Janeiro",
+        "country": "Brazil",
+        "lat": -22.9068,
+        "lng": -43.1729,
+        "places": [
+          "Ipanema Beach",
+          "Lapa Arches",
+          "Tijuca National Park",
+          "Maracanã Stadium",
+          "Santa Teresa Neighborhood"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "southern-chile-summer-2018",
+    "title": "Southern Chile Summer 2018",
+    "description": "Exploring the stunning lakes, volcanoes, fjords, and unique culture of Chile's Lakes District and Chiloé Island.",
+    "start_date": "2018-01-10",
+    "end_date": "2018-01-31",
+    "cover_image": "https://images.unsplash.com/photo-1688151027303-ff4e8f5e24fc?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "tags": [
+      "Nature",
+      "Hiking",
+      "Lakes",
+      "Mountains",
+      "Islands",
+      "Culture",
+      "Road Trip"
+    ],
+    "cities": [
+      {
+        "name": "Puerto Varas",
+        "country": "Chile",
+        "lat": -41.3195,
+        "lng": -72.9854,
+        "places": [
+          "Lake Llanquihue",
+          "Osorno Volcano",
+          "Petrohué Waterfalls"
+        ]
+      },
+      {
+        "name": "Cochamó",
+        "country": "Chile",
+        "lat": -41.5,
+        "lng": -72.3167,
+        "places": [
+          "Cochamó Valley",
+          "La Junta",
+          "Hiking & Climbing"
+        ]
+      },
+      {
+        "name": "Chaitén",
+        "country": "Chile",
+        "lat": -42.9167,
+        "lng": -72.7167,
+        "places": [
+          "Pumalín Park",
+          "Chaitén Volcano",
+          "Santa Bárbara Beach"
+        ]
+      },
+      {
+        "name": "Quellón",
+        "country": "Chile",
+        "lat": -43.1167,
+        "lng": -73.6167,
+        "places": [
+          "End of the Pan-American Highway (Hito Cero)",
+          "Yaldad Beach",
+          "Quellón Viejo"
+        ]
+      },
+      {
+        "name": "Castro",
+        "country": "Chile",
+        "lat": -42.4825,
+        "lng": -73.765,
+        "places": [
+          "Palafitos (Stilt Houses)",
+          "San Francisco Church",
+          "Chiloé National Park (nearby)"
+        ]
+      },
+      {
+        "name": "Ancud",
+        "country": "Chile",
+        "lat": -41.8667,
+        "lng": -73.8333,
+        "places": [
+          "Fuerte San Antonio",
+          "Penguin Colony Puñihuil",
+          "Regional Museum of Ancud"
+        ]
+      },
+      {
+        "name": "Futrono",
+        "country": "Chile",
+        "lat": -40.1333,
+        "lng": -72.4,
+        "places": [
+          "Lake Ranco",
+          "Hot Springs (Termas)",
+          "Huilo Huilo Biological Reserve (nearby)"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "easter-island-exploration-2018",
+    "title": "Easter Island Exploration 2018",
+    "description": "Exploring the mysterious Moai statues and unique culture of Rapa Nui (Easter Island).",
+    "start_date": "2018-02-10",
+    "end_date": "2018-02-24",
+    "cover_image": "https://images.unsplash.com/photo-1600754047212-0cf91397fbc6?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "tags": [
+      "Cultural",
+      "History",
+      "Nature",
+      "Island",
+      "Archaeology",
+      "Mystery"
+    ],
+    "cities": [
+      {
+        "name": "Hanga Roa",
+        "country": "Chile",
+        "lat": -27.1498,
+        "lng": -109.4228,
+        "places": [
+          "Rano Raraku (Moai Quarry)",
+          "Ahu Tongariki",
+          "Anakena Beach",
+          "Rano Kau Volcano",
+          "Orongo Ceremonial Village"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "brazil-winter-escape-2018",
+    "title": "Brazil Winter Escape 2018",
+    "description": "Exploring the vibrant city of Rio de Janeiro and relaxing on the beaches of Pipa.",
+    "start_date": "2018-07-10",
+    "end_date": "2018-07-24",
+    "cover_image": "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "tags": [
+      "Beach",
+      "Urban",
+      "Nature",
+      "Relaxation",
+      "Winter Getaway"
+    ],
+    "cities": [
+      {
+        "name": "Rio de Janeiro",
+        "country": "Brazil",
+        "lat": -22.9068,
+        "lng": -43.1729,
+        "places": [
+          "Christ the Redeemer",
+          "Sugarloaf Mountain",
+          "Copacabana Beach",
+          "Ipanema Beach",
+          "Selarón Steps"
+        ]
+      },
+      {
+        "name": "Praia da Pipa",
+        "country": "Brazil",
+        "lat": -6.2278,
+        "lng": -35.0486,
+        "places": [
+          "Praia do Amor",
+          "Baía dos Golfinhos",
+          "Santuário Ecológico de Pipa",
+          "Madeiro Beach"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "torres-del-paine-o-circuit-2019",
+    "title": "Torres del Paine O Circuit 2019",
+    "description": "Completing the challenging and rewarding O Circuit trek around the Paine Massif in Patagonia, starting from Punta Arenas.",
+    "start_date": "2019-01-01",
+    "end_date": "2019-01-14",
+    "cover_image": "https://images.unsplash.com/photo-1478827387698-1527781a4887?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "tags": [
+      "Hiking",
+      "Trekking",
+      "Nature",
+      "Mountains",
+      "Patagonia",
+      "Adventure",
+      "Glaciers"
+    ],
+    "cities": [
+      {
+        "name": "Punta Arenas",
+        "country": "Chile",
+        "lat": -53.1638,
+        "lng": -70.9171,
+        "places": [
+          "Plaza de Armas",
+          "Nao Victoria Museum",
+          "Magallanes Regional Museum",
+          "Strait of Magellan"
+        ]
+      },
+      {
+        "name": "Torres del Paine",
+        "country": "Chile",
+        "lat": -50.9423,
+        "lng": -73.4068,
+        "places": [
+          "O Circuit Trek",
+          "Dickson Glacier",
+          "Los Perros Pass",
+          "Grey Glacier",
+          "French Valley",
+          "Las Torres Base"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "us-east-coast-winter-2019",
+    "title": "US East Coast Winter 2019",
+    "description": "Winter exploration of America's historic East Coast cities.",
+    "start_date": "2019-02-01",
+    "end_date": "2019-02-21",
+    "cover_image": "https://images.unsplash.com/photo-1490644658840-3f2e3f8c5625?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3",
+    "tags": [
+      "Urban",
+      "History",
+      "Culture",
+      "Winter",
+      "Museums"
+    ],
+    "cities": [
+      {
+        "name": "Philadelphia",
+        "country": "United States",
+        "lat": 39.9526,
+        "lng": -75.1652,
+        "places": [
+          "Liberty Bell",
+          "Independence Hall",
+          "Philadelphia Museum of Art"
+        ]
+      },
+      {
+        "name": "Washington DC",
+        "country": "United States",
+        "lat": 38.9072,
+        "lng": -77.0369,
+        "places": [
+          "National Mall",
+          "Smithsonian Museums",
+          "Capitol Building"
+        ]
+      },
+      {
+        "name": "New York",
+        "country": "United States",
+        "lat": 40.7128,
+        "lng": -74.006,
+        "places": [
+          "Central Park",
+          "Times Square",
+          "Empire State Building"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "china-hong-kong-adventure-2019",
+    "title": "China & Hong Kong Adventure 2019",
+    "description": "Exploring the vibrant cities of China and Hong Kong.",
+    "start_date": "2019-04-01",
+    "end_date": "2019-04-21",
+    "cover_image": "https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3",
+    "tags": [
+      "Urban",
+      "Culture",
+      "History",
+      "Food",
+      "Asia"
+    ],
+    "cities": [
+      {
+        "name": "Beijing",
+        "country": "China",
+        "lat": 39.9042,
+        "lng": 116.4074,
+        "places": [
+          "Great Wall",
+          "Forbidden City",
+          "Temple of Heaven"
+        ]
+      },
+      {
+        "name": "Shenzhen",
+        "country": "China",
+        "lat": 22.5431,
+        "lng": 114.0579,
+        "places": [
+          "Window of the World",
+          "OCT Loft",
+          "Dafen Oil Painting Village"
+        ]
+      },
+      {
+        "name": "Hong Kong",
+        "country": "Hong Kong",
+        "lat": 22.3193,
+        "lng": 114.1694,
+        "places": [
+          "Victoria Peak",
+          "Tsim Sha Tsui",
+          "Lantau Island"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "morocco-exploration-2019",
+    "title": "Morocco Exploration 2019",
+    "description": "Exploring the vibrant markets of Marrakech and the coastal charm of Essaouira.",
+    "start_date": "2019-05-01",
+    "end_date": "2019-05-10",
+    "cover_image": "https://images.unsplash.com/photo-1517573847294-84690dbc5df8?q=80&w=3188&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "tags": [
+      "Cultural",
+      "History",
+      "Markets",
+      "Beach",
+      "Architecture"
+    ],
+    "cities": [
+      {
+        "name": "Marrakech",
+        "country": "Morocco",
+        "lat": 31.6295,
+        "lng": -7.9811,
+        "places": [
+          "Jemaa el-Fnaa",
+          "Jardin Majorelle",
+          "Bahia Palace",
+          "Medina",
+          "Koutoubia Mosque"
+        ]
+      },
+      {
+        "name": "Essaouira",
+        "country": "Morocco",
+        "lat": 31.5085,
+        "lng": -9.7595,
+        "places": [
+          "Medina of Essaouira",
+          "Skala du Port",
+          "Beach",
+          "Essaouira Ramparts",
+          "Moulay Hassan Square"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "european-study-tour-2019",
+    "title": "European Study Tour 2019",
+    "description": "A study tour exploring major cities across Western Europe.",
+    "start_date": "2019-06-01",
+    "end_date": "2019-06-21",
+    "cover_image": "https://images.unsplash.com/photo-1610651219730-6b580d616e72?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "tags": [
+      "Cultural",
+      "History",
+      "Urban",
+      "Study",
+      "Europe",
+      "Architecture"
+    ],
+    "cities": [
+      {
+        "name": "Turin",
+        "country": "Italy",
+        "lat": 45.0703,
+        "lng": 7.6869,
+        "places": [
+          "Mole Antonelliana",
+          "Egyptian Museum",
+          "Piazza Castello"
+        ]
+      },
+      {
+        "name": "Paris",
+        "country": "France",
+        "lat": 48.8566,
+        "lng": 2.3522,
+        "places": [
+          "Eiffel Tower",
+          "Louvre",
+          "Montmartre"
+        ]
+      },
+      {
+        "name": "Brussels",
+        "country": "Belgium",
+        "lat": 50.8503,
+        "lng": 4.3517,
+        "places": [
+          "Grand Place",
+          "Atomium",
+          "Manneken Pis"
+        ]
+      },
+      {
+        "name": "Ghent",
+        "country": "Belgium",
+        "lat": 51.0543,
+        "lng": 3.7174,
+        "places": [
+          "Gravensteen",
+          "Saint Bavo's Cathedral",
+          "Graslei and Korenlei"
+        ]
+      },
+      {
+        "name": "Bruges",
+        "country": "Belgium",
+        "lat": 51.2093,
+        "lng": 3.2247,
+        "places": [
+          "Belfry of Bruges",
+          "Minnewater Lake",
+          "Canals"
+        ]
+      },
+      {
+        "name": "Amsterdam",
+        "country": "Netherlands",
+        "lat": 52.3676,
+        "lng": 4.9041,
+        "places": [
+          "Anne Frank House",
+          "Rijksmuseum",
+          "Canal Cruise"
+        ]
+      },
+      {
+        "name": "Madrid",
+        "country": "Spain",
+        "lat": 40.4168,
+        "lng": -3.7038,
+        "places": [
+          "Prado Museum",
+          "Royal Palace",
+          "Puerta del Sol"
+        ]
+      },
+      {
+        "name": "Barcelona",
+        "country": "Spain",
+        "lat": 41.3851,
+        "lng": 2.1734,
+        "places": [
+          "Sagrada Familia",
+          "Park Güell",
+          "Gothic Quarter"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "patagonia-adventure-2021",
+    "title": "Patagonia Adventure 2021",
+    "description": "Trekking through the stunning landscapes of Chilean Patagonia, completing the challenging O Circuit.",
+    "start_date": "2021-01-05",
+    "end_date": "2021-01-15",
+    "cover_image": "https://images.unsplash.com/photo-1478827387698-1527781a4887?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "tags": [
+      "Hiking",
+      "Nature",
+      "Mountains",
+      "Adventure"
+    ],
+    "cities": [
+      {
+        "name": "Puerto Natales",
+        "country": "Chile",
+        "lat": -51.7308,
+        "lng": -72.4977,
+        "places": [
+          "Mylodon Cave",
+          "Balmaceda Glacier",
+          "Serrano Glacier"
+        ]
+      },
+      {
+        "name": "Torres del Paine",
+        "country": "Chile",
+        "lat": -50.9423,
+        "lng": -73.4068,
+        "places": [
+          "O Circuit Trek",
+          "Grey Glacier",
+          "French Valley"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "european-capitals-tour-2022",
+    "title": "European Capitals Tour 2022",
+    "description": "A grand tour of Europe's most beautiful cities.",
+    "start_date": "2022-03-01",
+    "end_date": "2022-03-21",
+    "cover_image": "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3",
+    "tags": [
+      "Cultural",
+      "History",
+      "Urban",
+      "Architecture"
+    ],
+    "cities": [
+      {
+        "name": "Paris",
+        "country": "France",
+        "lat": 48.8566,
+        "lng": 2.3522,
+        "places": [
+          "Eiffel Tower",
+          "Louvre Museum",
+          "Notre-Dame Cathedral"
+        ]
+      },
+      {
+        "name": "Venice",
+        "country": "Italy",
+        "lat": 45.4408,
+        "lng": 12.3155,
+        "places": [
+          "St. Mark's Square",
+          "Rialto Bridge",
+          "Grand Canal"
+        ]
+      },
+      {
+        "name": "Florence",
+        "country": "Italy",
+        "lat": 43.7696,
+        "lng": 11.2558,
+        "places": []
+      },
+      {
+        "name": "Zurich",
+        "country": "Switzerland",
+        "lat": 47.3769,
+        "lng": 8.5417,
+        "places": []
+      },
+      {
+        "name": "Turin",
+        "country": "Italy",
+        "lat": 45.0703,
+        "lng": 7.6869,
+        "places": []
+      }
+    ]
+  },
+  {
+    "id": "costa-rica-adventure-2023",
+    "title": "Costa Rica Adventure 2023",
+    "description": "Exploring the rich biodiversity and beautiful beaches of Costa Rica's Caribbean and Pacific coasts.",
+    "start_date": "2023-04-01",
+    "end_date": "2023-04-15",
+    "cover_image": "https://plus.unsplash.com/premium_photo-1661877112841-0efa68b18527?q=80&w=3188&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "tags": [
+      "Nature",
+      "Beach",
+      "Wildlife",
+      "Adventure"
+    ],
+    "cities": [
+      {
+        "name": "Puerto Viejo",
+        "country": "Costa Rica",
+        "lat": 9.6558,
+        "lng": -82.7548,
+        "places": [
+          "Playa Cocles",
+          "Jaguar Rescue Center",
+          "Bri Bri Waterfalls"
+        ]
+      },
+      {
+        "name": "Manuel Antonio",
+        "country": "Costa Rica",
+        "lat": 9.3925,
+        "lng": -84.1416,
+        "places": [
+          "Manuel Antonio National Park",
+          "Espadilla Beach",
+          "Quepos Marina"
+        ]
+      },
+      {
+        "name": "Bocas del Toro",
+        "country": "Panama",
+        "lat": 9.3404,
+        "lng": -82.2412,
+        "places": [
+          "Starfish Beach",
+          "Red Frog Beach",
+          "Isla Bastimentos National Marine Park"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "buenos-aires-colonia-getaway-2023",
+    "title": "Buenos Aires & Colonia Getaway 2023",
+    "description": "Exploring the vibrant culture of Buenos Aires and the charming history of Colonia del Sacramento.",
+    "start_date": "2023-04-05",
+    "end_date": "2023-04-12",
+    "cover_image": "https://plus.unsplash.com/premium_photo-1697729901052-fe8900e24993?q=80&w=3133&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "tags": [
+      "Cultural",
+      "History",
+      "Food",
+      "Urban",
+      "Colonial"
+    ],
+    "cities": [
+      {
+        "name": "Buenos Aires",
+        "country": "Argentina",
+        "lat": -34.6037,
+        "lng": -58.3816,
+        "places": [
+          "La Boca",
+          "Recoleta Cemetery",
+          "Palermo Soho",
+          "Plaza de Mayo",
+          "Tango Show"
+        ]
+      },
+      {
+        "name": "Colonia del Sacramento",
+        "country": "Uruguay",
+        "lat": -34.4704,
+        "lng": -57.8438,
+        "places": [
+          "Barrio Histórico",
+          "Lighthouse",
+          "Calle de los Suspiros",
+          "Plaza Mayor"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "punta-cana-return-2023",
+    "title": "Punta Cana Return 2023",
+    "description": "Another relaxing getaway to the beautiful beaches of Punta Cana.",
+    "start_date": "2023-09-01",
+    "end_date": "2023-09-10",
+    "cover_image": "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?q=80&w=2849&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "tags": [
+      "Beach",
+      "Resort",
+      "Relaxation",
+      "Caribbean"
+    ],
+    "cities": [
+      {
+        "name": "Punta Cana",
+        "country": "Dominican Republic",
+        "lat": 18.5601,
+        "lng": -68.3725,
+        "places": [
+          "Cap Cana Marina",
+          "Macao Beach",
+          "Scape Park",
+          "Indigenous Eyes Ecological Reserve"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "chilean-lakes-adventure-2024",
+    "title": "Chilean Lakes Adventure 2024",
+    "description": "Exploring the pristine lakes and mountains of Chile's Lake District.",
+    "start_date": "2024-01-05",
+    "end_date": "2024-01-26",
+    "cover_image": "https://images.unsplash.com/photo-1583343733868-718f5d4a9531?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "tags": [
+      "Nature",
+      "Hiking",
+      "Lakes",
+      "Mountains",
+      "Adventure"
+    ],
+    "cities": [
+      {
+        "name": "Puerto Varas",
+        "country": "Chile",
+        "lat": -41.3195,
+        "lng": -72.9854,
+        "places": [
+          "Lake Llanquihue",
+          "Osorno Volcano",
+          "German Colonial Museum"
+        ]
+      },
+      {
+        "name": "Cochamó",
+        "country": "Chile",
+        "lat": -41.5,
+        "lng": -72.3167,
+        "places": [
+          "Cochamó Valley",
+          "La Junta",
+          "Arco Iris Trail"
+        ]
+      },
+      {
+        "name": "Puelo",
+        "country": "Chile",
+        "lat": -41.65,
+        "lng": -72.2333,
+        "places": [
+          "Lake Puelo",
+          "Puelo River",
+          "Tagua Tagua Lake"
+        ]
+      },
+      {
+        "name": "Hornopirén",
+        "country": "Chile",
+        "lat": -41.95,
+        "lng": -72.4333,
+        "places": [
+          "Hornopirén National Park",
+          "Yate Volcano",
+          "Hot Springs"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mediterranean-adventure-2024",
+    "title": "Mediterranean Adventure 2024",
+    "description": "Exploring the beautiful coastal cities of Italy and the stunning islands of Greece.",
+    "start_date": "2024-09-05",
+    "end_date": "2024-09-25",
+    "cover_image": "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80",
+    "tags": [
+      "Cultural",
+      "Beach",
+      "History",
+      "Food"
+    ],
+    "cities": [
+      {
+        "name": "Genova",
+        "country": "Italy",
+        "lat": 44.4056,
+        "lng": 8.9463,
+        "places": [
+          "Acquario di Genova",
+          "Palazzo Ducale",
+          "Via Garibaldi"
+        ]
+      },
+      {
+        "name": "Pisa",
+        "country": "Italy",
+        "lat": 43.7228,
+        "lng": 10.4017,
+        "places": [
+          "Leaning Tower",
+          "Piazza dei Miracoli",
+          "Battistero"
+        ]
+      },
+      {
+        "name": "Cinque Terre",
+        "country": "Italy",
+        "lat": 44.1461,
+        "lng": 9.6439,
+        "places": [
+          "Monterosso al Mare",
+          "Vernazza",
+          "Manarola"
+        ]
+      },
+      {
+        "name": "Rome",
+        "country": "Italy",
+        "lat": 41.9028,
+        "lng": 12.4964,
+        "places": [
+          "Colosseum",
+          "Vatican City",
+          "Trevi Fountain"
+        ]
+      },
+      {
+        "name": "Sorrento",
+        "country": "Italy",
+        "lat": 40.6263,
+        "lng": 14.3758,
+        "places": []
+      },
+      {
+        "name": "Positano",
+        "country": "Italy",
+        "lat": 40.6281,
+        "lng": 14.485,
+        "places": []
+      },
+      {
+        "name": "Capri",
+        "country": "Italy",
+        "lat": 40.5532,
+        "lng": 14.2222,
+        "places": []
+      },
+      {
+        "name": "Amalfi",
+        "country": "Italy",
+        "lat": 40.634,
+        "lng": 14.6027,
+        "places": []
+      },
+      {
+        "name": "Athens",
+        "country": "Greece",
+        "lat": 37.9838,
+        "lng": 23.7275,
+        "places": [
+          "Acropolis",
+          "Parthenon",
+          "Plaka"
+        ]
+      },
+      {
+        "name": "Santorini",
+        "country": "Greece",
+        "lat": 36.3932,
+        "lng": 25.4615,
+        "places": [
+          "Oia",
+          "Fira",
+          "Red Beach"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "punta-cana-getaway-2025",
+    "title": "Punta Cana Getaway 2025",
+    "description": "A relaxing beach vacation in the Caribbean paradise.",
+    "start_date": "2025-02-10",
+    "end_date": "2025-02-20",
+    "cover_image": "https://images.unsplash.com/photo-1569700876451-bc36dfa8e77c?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "tags": [
+      "Beach",
+      "Resort",
+      "Relaxation"
+    ],
+    "cities": [
+      {
+        "name": "Punta Cana",
+        "country": "Dominican Republic",
+        "lat": 18.5601,
+        "lng": -68.3725,
+        "places": [
+          "Bávaro Beach",
+          "Cap Cana Marina",
+          "Indigenous Eyes Ecological Park"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rio-de-janeiro-2025",
+    "title": "Rio de Janeiro 2025",
+    "description": "Salida express en mayo.",
+    "start_date": "2025-05-21",
+    "end_date": "2025-05-26",
+    "cover_image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800",
+    "tags": [
+      "Relax",
+      "Beaches"
+    ],
+    "cities": [
+      {
+        "name": "Rio de Janeiro",
+        "country": "Brazil",
+        "lat": -22.9068,
+        "lng": -43.1729,
+        "places": [
+          "Ipanema",
+          "Copacabana"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gran-tour-mediterraneo-2025",
+    "title": "Gran Tour Mediterráneo 2025",
+    "description": "Viaje épico por Portugal, España e islas mediterráneas en octubre de 2025.",
+    "start_date": "2025-10-01",
+    "end_date": "2025-10-31",
+    "cover_image": "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?ixlib=rb-4.0.3",
+    "tags": [
+      "Mediterráneo",
+      "Cultura",
+      "Playas",
+      "Historia"
+    ],
+    "cities": [
+      {
+        "name": "Lisboa",
+        "country": "Portugal",
+        "lat": 38.7223,
+        "lng": -9.1393,
+        "places": []
+      },
+      {
+        "name": "Faro",
+        "country": "Portugal",
+        "lat": 37.0194,
+        "lng": -7.9304,
+        "places": []
+      },
+      {
+        "name": "Sevilla",
+        "country": "Spain",
+        "lat": 37.3891,
+        "lng": -5.9845,
+        "places": []
+      },
+      {
+        "name": "Málaga",
+        "country": "Spain",
+        "lat": 36.7213,
+        "lng": -4.4214,
+        "places": []
+      },
+      {
+        "name": "Palma de Mallorca",
+        "country": "Spain",
+        "lat": 39.5696,
+        "lng": 2.6502,
+        "places": []
+      },
+      {
+        "name": "Cagliari",
+        "country": "Italy",
+        "lat": 39.2238,
+        "lng": 9.1217,
+        "places": []
+      },
+      {
+        "name": "Palermo",
+        "country": "Italy",
+        "lat": 38.1157,
+        "lng": 13.3615,
+        "places": []
+      },
+      {
+        "name": "Agrigento",
+        "country": "Italy",
+        "lat": 37.3111,
+        "lng": 13.5765,
+        "places": []
+      },
+      {
+        "name": "Catania",
+        "country": "Italy",
+        "lat": 37.5079,
+        "lng": 15.083,
+        "places": []
+      },
+      {
+        "name": "La Valeta",
+        "country": "Malta",
+        "lat": 35.8989,
+        "lng": 14.5146,
+        "places": []
+      },
+      {
+        "name": "Oporto",
+        "country": "Portugal",
+        "lat": 41.1579,
+        "lng": -8.6291,
+        "places": []
+      }
+    ]
+  },
+  {
+    "id": "florianopolis-2026",
+    "title": "Florianópolis 2026",
+    "description": "Escapada a Florianópolis, alojando en Ingleses.",
+    "start_date": "2026-04-29",
+    "end_date": "2026-05-04",
+    "cover_image": "https://images.unsplash.com/photo-1681157865251-2155d60882c0?q=80&w=2000&auto=format&fit=crop",
+    "tags": [
+      "Playas",
+      "Brasil",
+      "Escapada"
+    ],
+    "cities": [
+      {
+        "name": "Florianópolis",
+        "country": "Brazil",
+        "lat": -27.5954,
+        "lng": -48.548,
+        "places": [
+          "Praia dos Ingleses",
+          "Praia da Lagoinha",
+          "Canasvieiras",
+          "Jurerê",
+          "Praia Brava",
+          "Joaquina",
+          "Centro de Florianópolis",
+          "Santo Antônio de Lisboa"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rio-buzios-2026",
+    "title": "Rio & Búzios 2026",
+    "description": "Viaje en parejas: primero Búzios y después Rio de Janeiro.",
+    "start_date": "2026-06-17",
+    "end_date": "2026-06-25",
+    "cover_image": "https://images.unsplash.com/photo-1515898698999-18f625d67499?q=80&w=2000&auto=format&fit=crop",
+    "tags": [
+      "Playas",
+      "Parejas",
+      "Invierno"
+    ],
+    "cities": [
+      {
+        "name": "Búzios",
+        "country": "Brazil",
+        "lat": -22.7469,
+        "lng": -41.8817,
+        "places": [
+          "Rua das Pedras",
+          "Day trip a Arraial do Cabo",
+          "Praia de Geribá",
+          "Praia da Ferradura",
+          "Praia de João Fernandes"
+        ]
+      },
+      {
+        "name": "Rio de Janeiro",
+        "country": "Brazil",
+        "lat": -22.9068,
+        "lng": -43.1729,
+        "places": [
+          "Ipanema",
+          "Cristo Redentor",
+          "Pan de Azúcar",
+          "Pedra Bonita",
+          "Lapa",
+          "Arpoador",
+          "Copacabana"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sudeste-asiatico-2027",
+    "title": "Sudeste Asiático 2027",
+    "description": "Stopover en Estambul y después Vietnam de norte a sur, Angkor en Camboya y cierre en Singapur. Ruta tentativa.",
+    "start_date": "2027-01-22",
+    "end_date": "2027-02-25",
+    "cover_image": "https://images.unsplash.com/photo-1643029891412-92f9a81a8c16?q=80&w=2000&auto=format&fit=crop",
+    "tags": [
+      "Próximo",
+      "Pareja",
+      "Open jaw"
+    ],
+    "cities": [
+      {
+        "name": "Estambul",
+        "country": "Turkey",
+        "lat": 41.0082,
+        "lng": 28.9784,
+        "places": []
+      },
+      {
+        "name": "Hanói",
+        "country": "Vietnam",
+        "lat": 21.0278,
+        "lng": 105.8342,
+        "places": [
+          "Casco antiguo",
+          "Comida callejera"
+        ]
+      },
+      {
+        "name": "Sapa",
+        "country": "Vietnam",
+        "lat": 22.3364,
+        "lng": 103.8438,
+        "places": [
+          "Terrazas de arroz",
+          "Trekking"
+        ]
+      },
+      {
+        "name": "Ninh Binh",
+        "country": "Vietnam",
+        "lat": 20.2506,
+        "lng": 105.9745,
+        "places": [
+          "Tam Coc",
+          "Trang An"
+        ]
+      },
+      {
+        "name": "Bahía de Lan Ha / Halong",
+        "country": "Vietnam",
+        "lat": 20.9101,
+        "lng": 107.1839,
+        "places": [
+          "Noche a bordo en la bahía",
+          "Kayak"
+        ]
+      },
+      {
+        "name": "Hoi An",
+        "country": "Vietnam",
+        "lat": 15.8801,
+        "lng": 108.338,
+        "places": [
+          "Pueblo de farolillos"
+        ]
+      },
+      {
+        "name": "Da Nang",
+        "country": "Vietnam",
+        "lat": 16.0544,
+        "lng": 108.2022,
+        "places": []
+      },
+      {
+        "name": "Hue",
+        "country": "Vietnam",
+        "lat": 16.4637,
+        "lng": 107.5909,
+        "places": [
+          "Ciudad imperial"
+        ]
+      },
+      {
+        "name": "Nha Trang",
+        "country": "Vietnam",
+        "lat": 12.2388,
+        "lng": 109.1967,
+        "places": []
+      },
+      {
+        "name": "Ho Chi Minh (Saigón)",
+        "country": "Vietnam",
+        "lat": 10.8231,
+        "lng": 106.6297,
+        "places": [
+          "Túneles de Cu Chi"
+        ]
+      },
+      {
+        "name": "Delta del Mekong",
+        "country": "Vietnam",
+        "lat": 10.0452,
+        "lng": 105.7469,
+        "places": [
+          "Mercados flotantes"
+        ]
+      },
+      {
+        "name": "Siem Reap",
+        "country": "Cambodia",
+        "lat": 13.3671,
+        "lng": 103.8448,
+        "places": [
+          "Angkor Wat",
+          "Ta Prohm",
+          "Bayon"
+        ]
+      },
+      {
+        "name": "Phnom Penh",
+        "country": "Cambodia",
+        "lat": 11.5564,
+        "lng": 104.9282,
+        "places": []
+      },
+      {
+        "name": "Koh Rong",
+        "country": "Cambodia",
+        "lat": 10.7151,
+        "lng": 103.2416,
+        "places": []
+      },
+      {
+        "name": "Singapur",
+        "country": "Singapore",
+        "lat": 1.3521,
+        "lng": 103.8198,
+        "places": [
+          "Gardens by the Bay",
+          "Hawker centers",
+          "Marina Bay"
+        ]
+      }
+    ]
+  }
+]
